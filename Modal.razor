@@ -1,0 +1,31 @@
+﻿@inherits ModalBase
+
+<div class="bm-container @(IsVisible ? "bm-active" : string.Empty)">
+
+    <div class="bm-overlay" @onclick="@CloseModal"></div>
+
+
+    <div class="card blazor-modal">
+        <div class="card-header">
+            <div class="c-header">
+                <h4 class="c-title">@Title</h4>
+                <div class="c-pa">
+                    <div class="c-pa-btn">
+                        <button class="base-btn" @onclick="@CloseModal">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body c-body">
+            @Content
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+}
+
